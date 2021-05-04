@@ -1,14 +1,14 @@
 <?php
 session_start();
 include_once("adatb.php");
-$conn=connect();
+
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
     <title>
-        Müsorújság
+        Álláskeresés
     </title>
     <link rel="stylesheet" type="text/css" href="stilus.css" />
     <?php include "menu.php"; ?>

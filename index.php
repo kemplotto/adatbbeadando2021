@@ -8,7 +8,7 @@ include_once("adatb.php");
 <html>
 <head>
     <title>
-        Müsorújság
+        Álláskeresés
     </title>
     <link rel="stylesheet" type="text/css" href="stilus.css" />
     <?php include "menu.php"; ?>

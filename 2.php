@@ -8,7 +8,7 @@ include_once("adatb.php");
 <html>
 <head>
     <title>
-        Müsorújság
+        Álláskeresés
     </title>
     <link rel="stylesheet" type="text/css" href="stilus.css" />
     <?php include "menu.php"; ?>
@@ -38,7 +38,7 @@ include_once("adatb.php");
     echo '<table border=1>';
     while ($record= oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
         echo "<tr>\n";
-        echo sprintf('<p><td>%s </td><td> %s</td><td> Leírás: %s</p></td>', $record['COMPANY_NAME'], $record['JOB_DESC'], $record['POSITION']);
+        echo sprintf('<p><td>%s </td><td> %s</td><td> Munkakör: %s</p></td>', $record['COMPANY_NAME'], $record['JOB_DESC'], $record['POSITION']);
         echo "</tr>\n";
     }
 

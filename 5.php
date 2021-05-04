@@ -1,7 +1,7 @@
 <?php
 session_start();
 include_once("adatb.php");
-$conn=connect();
+
 ?>
 
 <!DOCTYPE html>

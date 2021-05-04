@@ -1,11 +1,11 @@
 --------------------------------------------------------
---  File created - péntek-április-30-2021   
+--  File created - kedd-május-04-2021   
 --------------------------------------------------------
 --------------------------------------------------------
 --  DDL for Sequence COMPANY_PROFILE_SEQ
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "SIMON"."COMPANY_PROFILE_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 5 CACHE 100 NOORDER  NOCYCLE   ;
+   CREATE SEQUENCE  "SIMON"."COMPANY_PROFILE_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 105 CACHE 100 NOORDER  NOCYCLE   ;
 --------------------------------------------------------
 --  DDL for Sequence JOB_SEQ
 --------------------------------------------------------
@@ -15,7 +15,7 @@
 --  DDL for Sequence USER_PROFILE_SEQ
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "SIMON"."USER_PROFILE_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 4 CACHE 100 NOORDER  NOCYCLE   ;
+   CREATE SEQUENCE  "SIMON"."USER_PROFILE_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 104 CACHE 100 NOORDER  NOCYCLE   ;
 --------------------------------------------------------
 --  DDL for Table COMPANY_PROFILE
 --------------------------------------------------------
@@ -160,6 +160,9 @@ REM INSERTING into SIMON.COMPANY_PROFILE
 SET DEFINE OFF;
 Insert into SIMON.COMPANY_PROFILE (ID,ADMIN_ID,COMPANY_NAME,COMPANY_DESCRIPTION,CONTACT_EMAIL,CONTACT_PHONE,LOCATION) values ('2','1','Sio','Gyümölcsital készítéssel foglalkozo cég','sio@e-mail.hu','234567','Magyarország');
 Insert into SIMON.COMPANY_PROFILE (ID,ADMIN_ID,COMPANY_NAME,COMPANY_DESCRIPTION,CONTACT_EMAIL,CONTACT_PHONE,LOCATION) values ('1','1','Narancs','Telefonos eszközökkel, és szoftvefejlesztéssel foglalkozó cég','narancs@e-mail.com','123456','Magyarország');
+Insert into SIMON.COMPANY_PROFILE (ID,ADMIN_ID,COMPANY_NAME,COMPANY_DESCRIPTION,CONTACT_EMAIL,CONTACT_PHONE,LOCATION) values ('56','1','Epson','Cégünk nyomtatással foglalkozik','epson@nyomtato.com','301234567','Magyarország');
+Insert into SIMON.COMPANY_PROFILE (ID,ADMIN_ID,COMPANY_NAME,COMPANY_DESCRIPTION,CONTACT_EMAIL,CONTACT_PHONE,LOCATION) values ('60','1','Heyho','Gyümölcslé ','heyho@email.hu','702873645','Budaörs, Budapesti út 28, 2040');
+Insert into SIMON.COMPANY_PROFILE (ID,ADMIN_ID,COMPANY_NAME,COMPANY_DESCRIPTION,CONTACT_EMAIL,CONTACT_PHONE,LOCATION) values ('41','1','Alexandra','Cégünk könyv árúsítással, valamint kiadással foglalkozik','alexandra@konyv.hu','203456789',' Szeged, Londoni krt. 3, 6724');
 REM INSERTING into SIMON.EDUCATION
 SET DEFINE OFF;
 REM INSERTING into SIMON.JOB
@@ -181,6 +184,9 @@ REM INSERTING into SIMON.USER_PROFILE
 SET DEFINE OFF;
 Insert into SIMON.USER_PROFILE (ID,USER_TYPE_ID,EMAIL,PASSWORD,DATE_OF_BIRTH,ACTIVE,CONTACT_NUMBER,LOGIN_DATE) values ('1','1','admin@mail.com','12345',to_date('96-JÚL.  -15','RR-MON-DD'),'1','22334455',to_date('21-ÁPR.  -20','RR-MON-DD'));
 Insert into SIMON.USER_PROFILE (ID,USER_TYPE_ID,EMAIL,PASSWORD,DATE_OF_BIRTH,ACTIVE,CONTACT_NUMBER,LOGIN_DATE) values ('2','2','masik@mail.com','45678',to_date('97-JÚL.  -17','RR-MON-DD'),'1','55443322',to_date('21-ÁPR.  -22','RR-MON-DD'));
+Insert into SIMON.USER_PROFILE (ID,USER_TYPE_ID,EMAIL,PASSWORD,DATE_OF_BIRTH,ACTIVE,CONTACT_NUMBER,LOGIN_DATE) values ('4',null,null,'$2y$10$5CaUWjmgZ.FgOdanALCNy.Rny93y8sGWlinH3ecIT2Y/3cj/m2KiC',null,null,null,null);
+Insert into SIMON.USER_PROFILE (ID,USER_TYPE_ID,EMAIL,PASSWORD,DATE_OF_BIRTH,ACTIVE,CONTACT_NUMBER,LOGIN_DATE) values ('6',null,'proba@email.hu','$2y$10$MgIal5tNpEMaltTwcL20teDysnV/3O63lwgGe3XFNFChRpgsMZXwm',null,null,null,null);
+Insert into SIMON.USER_PROFILE (ID,USER_TYPE_ID,EMAIL,PASSWORD,DATE_OF_BIRTH,ACTIVE,CONTACT_NUMBER,LOGIN_DATE) values ('5',null,null,'$2y$10$2EUb1yxnssXi9xbbp7mGbOgWJEiCFczqV4zAlbwAQRCQR2eBxkAzC',null,null,null,null);
 REM INSERTING into SIMON.USER_SKILL
 SET DEFINE OFF;
 Insert into SIMON.USER_SKILL (USER_ID,SKILL_SET_ID,SKILL_LEVEL) values ('1','1','Admin');
