@@ -42,27 +42,34 @@ $stid = oci_parse($conn, "select * from USER_PROFILE where email=:email");
 						
 						$pemail=$row['EMAIL'];
 						$plastname= $row['LAST_NAME'];
-						$plastname= $row['FIRST_NAME'];
+						$pfirstname= $row['FIRST_NAME'];
 						$pcontact = $row['CONTACT_NUMBER'];
 					}
 					echo "E-mail: "; echo $pemail; echo"<br>";
-					echo "Last name:"; echo $plastname; echo"<br>";
-					echo "First name:"; echo $pfirstname; echo"<br>";
+					echo "Vezetéknév: "; echo $plastname; echo"<br>";
+					echo "Keresztnév: "; echo $pfirstname; echo"<br>";
 					echo "Telefonszám: "; echo $pcontact;  echo"<br>";
-	if(isset($_POST['submit'])){				
-$update = "update USER_PROFILE SET FIRST_NAME = :firstname WHERE EMAIL=:email";
+					
+	if(isset($_POST['submit'])){	
+	
+	
+$firstname =  $_POST['firstname'];	
+$lastname = $_POST['lastname'];
+$update = "update USER_PROFILE SET FIRST_NAME=:firstname, LAST_NAME = :lastname WHERE EMAIL=:email";
 $stmt = oci_parse($conn, $update);
 oci_bind_by_name($stmt, ':firstname', $firstname);
+oci_bind_by_name($stmt, ':lastname', $lastname);
 oci_bind_by_name($stmt, ':email', $email);
-$result = oci_execute($stmt, OCI_DEFAULT);
+$result = oci_execute($stmt, OCI_COMMIT_ON_SUCCESS);
 if (!$result) {
   echo oci_error();   
 }
 	}
 ?>
-
-<form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
-	<input type="text" name="firstname" value="" placeholder="firstname">
+<h1>Az adatok frissítéséhez töltsd ki a mezőket:</h1>
+<form action="profile.php" method="post">
+	<input type="text" name="firstname" value="" placeholder="Keresztnév">
+	<input type="text" name="lastname" value="" placeholder="vezetéknév">
 	<button type="submit" name="submit">Submit</button>
 </form>
 

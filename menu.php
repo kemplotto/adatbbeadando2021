@@ -17,7 +17,7 @@
 	  echo ' <li><a href="profile.php">Profil</a></li>';
   }
   else {echo '<li><a href="login2.php">Bejelentkezés</a></li>';
-		echo '<li><a href="reg.php">Regisztráció</a></li>';
+		echo '<li><a href="reg2.php">Regisztráció</a></li>';
   }
   ?>
     </ul>
