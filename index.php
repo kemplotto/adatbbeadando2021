@@ -19,7 +19,7 @@ include_once("adatb.php");
 <div id="content">
 
 <?php
-echo "1\n";
+echo "Cégek listája:\n";
 $stid = oci_parse($conn, 'SELECT * FROM SIMON.COMPANY_PROFILE');
 if (!$stid) {
     $e = oci_error($conn);
@@ -35,7 +35,7 @@ if (!$r) {
 echo '<table border=1>';
 while ($record= oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
     echo "<tr>\n";
-    echo sprintf('<p><td>%s </td><td> %s</td><td> Leírás: %s</p></td>', $record['COMPANY_NAME'], $record['LOCATION'], $record['COMPANY_DESCRIPTION']);
+    echo sprintf('<p><td>%s </td><td> %s</td><td> Leírás: %s<td> Email: %s</p><td> Tel: %s</p></td></p>', $record['COMPANY_NAME'], $record['LOCATION'], $record['COMPANY_DESCRIPTION'], $record['CONTACT_EMAIL'], $record['CONTACT_PHONE']);
     echo "</tr>\n";
 }
 

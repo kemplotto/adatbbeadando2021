@@ -19,7 +19,7 @@ include_once("adatb.php");
 <div id="content">
 
     <?php
-    echo "2\n";
+    echo "Állások\n";
     $stid = oci_parse($conn, 'SELECT CP.COMPANY_NAME, JO.JOB_DESC, JO.POSITION , JO.ID 
                                         FROM company_profile CP, job JO
                                         WHERE CP.id = JO.COMPANY_ID
