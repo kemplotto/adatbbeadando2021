@@ -18,9 +18,10 @@ include_once("adatb.php");
 
 <div id="content">
 
+
 <?php
-echo "5\n";
-$stid = oci_parse($conn, 'SELECT * FROM SIMON.COMPANY_PROFILE');
+echo "Cégek adatainek módosítása\n";
+$stid = oci_parse($conn, 'SELECT * FROM COMPANY_PROFILE');
 if (!$stid) {
     $e = oci_error($conn);
     trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
@@ -32,15 +33,29 @@ if (!$r) {
     trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
 }
 
+
+function hello() {
+  alert(clicked);
+  return false;
+}
+
+
+
 echo '<table border=1>';
 while ($record= oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
-    echo "<tr>\n";
-    echo sprintf('<p><td>%s </td><td> %s</td><td> Leírás: %s</p></td>', $record['COMPANY_NAME'], $record['LOCATION'], $record['COMPANY_DESCRIPTION']);
+    echo sprintf('<p><td>%s </td><td> %s</td><td> Leírás: %s<td> Email: %s</p><td> Tel: %s</p></td></p>', $record['COMPANY_NAME'], $record['LOCATION'], $record['COMPANY_DESCRIPTION'], $record['CONTACT_EMAIL'], $record['CONTACT_PHONE']);
+
+		?>
+	<td><a href="5_delete_process.php?company_id=<?php echo $record["ID"]; ?>">Delete</a></td>
+		<?php
     echo "</tr>\n";
 }
 
+
+
 oci_free_statement($stid);
 oci_close($conn); ?>
+
 
 </div>
 </body>
