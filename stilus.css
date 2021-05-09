@@ -60,9 +60,7 @@ h2{
 	text-shadow:10px 10px 10px black;
 }
 
-form{
-	display:inline;
-}
+
 
 
 .logged_in{
@@ -122,35 +120,57 @@ li a:hover {
 }
 
 
-div#reg input[type=text], input[type=password], input[type=email], input[type=tel], input[type=range], input[type=date],input[type=file]{
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
-    text-align: center;
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 50%%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  
 }
 
-div#login input[type=text], input[type=password] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
-    text-align: center;
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #ccc;
 }
 
-	
-   #reg, #login {
-            width: 40%;
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+#login-form {
+	 width: 40%;
             margin:auto;
             text-align: center;
-        }
+	
+}
 
 
-#reg, #login {
-    text-align: center;
-margin:auto;}
+#reg-form {
+	 width: 40%;
+            margin:auto;
+            text-align: center;
+	
+}
+#login-form input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+	text-align: center;
+	}
+
+form{
+	display:inline;
 }

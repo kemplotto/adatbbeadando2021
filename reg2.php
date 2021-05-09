@@ -14,9 +14,7 @@ error_reporting(0);
 <head>
     <meta charset="UTF-8">
     <title>Regisztráció</title>
-    <style>
- 		<?php include "stilus.css"; ?>
-	</style>
+  <link rel="stylesheet" href="stilus.css">
 </head>
 
 <body>
@@ -31,19 +29,21 @@ error_reporting(0);
 
 <main>
 
-<div id="reg">
+<div id="reg-form">
   <form action="reg2.php" method="POST" enctype="multipart/form-data" autocomplete="off" >
      
+	 <label class="urlap">E-mail cím: <br><input type="email" name="email" placeholder="valami@valami.com" value="<?php echo $_POST['email']; ?>"/></label>
+        <br />
+	 
         <label class="urlap">Jelszó: <br><input type="password" name="password" maxlength="15" placeholder="******" required value="<?php echo $_POST['password']; ?>"/></label>
   
         <br />
 
-        <label class="urlap">E-mail cím: <br><input type="email" name="email" placeholder="valami@valami.com" value="<?php echo $_POST['email']; ?>"/></label>
-        <br />
+        
    
         <input type="submit" name="submit" value="Regisztráció" />
 </form>
-
+</div>
 <?php
 
 
