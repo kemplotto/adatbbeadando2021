@@ -1,20 +1,3 @@
-CREATE SEQUENCE skill_set_seq
-START WITH 1
-INCREMENT BY 1
-CACHE 100;
-/
-
-CREATE OR REPLACE TRIGGER skill_set_increment
-BEFORE INSERT ON SKILL_SET
-FOR EACH ROW
-
-BEGIN
-	SELECT skill_set_seq.NEXTVAL
-	INTO :new.id
-	FROM dual;
-END;
-/
-
 insert into SKILL_SET (SKILL_SET_NAME) values ('Hygiene');
 insert into SKILL_SET (SKILL_SET_NAME) values ('Data Integration');
 insert into SKILL_SET (SKILL_SET_NAME) values ('ICP-MS');
