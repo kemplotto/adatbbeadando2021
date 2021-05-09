@@ -14,9 +14,7 @@ error_reporting(0);
 <head>
     <meta charset="UTF-8">
     <title>Regisztráció</title>
-    <style>
- 		<?php include "stilus.css"; ?>
-	</style>
+  <link rel="stylesheet" href="stilus.css">
 </head>
 
 <body>

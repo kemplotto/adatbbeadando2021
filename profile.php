@@ -32,14 +32,15 @@
 $plastname="";
 $pfirstname="";
 $pemail="";
+$pcontanct="";
 $email=$_SESSION['loggedin'];
 $stid = oci_parse($conn, "select * from USER_PROFILE where email=:email");
 					oci_bind_by_name($stid, ":email", $email);
 					oci_execute($stid);
 					
-					while ( ($row = oci_fetch_array($stid, OCI_ASSOC)) != false) {
+					while ( ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_LOBS+OCI_RETURN_NULLS)) != false) {
 						$pcontact = $row['CONTACT_NUMBER'];
-						$pemail=$row['EMAIL'];
+						$pemail= $row['EMAIL'];
 						$plastname= $row['LAST_NAME'];
 						$pfirstname= $row['FIRST_NAME'];
 						
@@ -55,7 +56,7 @@ $stid = oci_parse($conn, "select * from USER_PROFILE where email=:email");
 $firstname =  $_POST['firstname'];	
 $lastname = $_POST['lastname'];
 $contactnumber = $_POST['contactnumber'];
-$update = "update USER_PROFILE SET FIRST_NAME=:firstname, LAST_NAME = :lastname, CONTACT_NUMBER=:contact, WHERE EMAIL=:email";
+$update = "update USER_PROFILE SET FIRST_NAME=:firstname, LAST_NAME = :lastname, CONTACT_NUMBER=:contact WHERE EMAIL=:email";
 $stmt = oci_parse($conn, $update);
 oci_bind_by_name($stmt, ':firstname', $firstname);
 oci_bind_by_name($stmt, ':lastname', $lastname);
