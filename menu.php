@@ -33,7 +33,7 @@ $stid = oci_parse($conn, "select * from USER_PROFILE where email=:email");
 						$pfirstname= $row['FIRST_NAME'];
 						$pemail=$row['EMAIL'];
 					}
-					echo "Üdvözöllek az oldalon "; echo $pfirstname ; echo $plastname;
+					echo 'Üdvözöllek az oldalon '  . $pfirstname . " " .  $plastname;
 			
   }
   else {echo '<li><a href="login2.php">Bejelentkezés</a></li>';

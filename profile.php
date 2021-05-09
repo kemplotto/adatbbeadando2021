@@ -67,6 +67,7 @@ oci_bind_by_name($stmt, ':lastname', $lastname);
 oci_bind_by_name($stmt, ':contact', $contactnumber);
 oci_bind_by_name($stmt, ':email', $email);
 $result = oci_execute($stmt, OCI_COMMIT_ON_SUCCESS);
+ echo "<meta http-equiv='refresh' content='0'>";
 if (!$result) {
   echo oci_error();   
 }
