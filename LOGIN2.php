@@ -59,12 +59,13 @@ $dbpass="";
             <div class="login">
 			<form action="login2.php" method="post" enctype="multipart/form-data"id ="login-form">	
                 <h1> Bejelentkezés </h1>
-       
+       <label class="urlap">E-mail cím: <br>
                 <input  type="email" name="email" value="" placeholder="example@example.com:"
                     tabindex="3" />
-              <br>
+              
+			  <label class="urlap">Jelszó: <br>
                 <input type="password" name="password" id="password" value="" placeholder="**********:"
-                    tabindex="4" />
+                     />
                 <p><input type="submit" name="submit" value ="Bejelentkezés"/></p>
             </form>
 			</div>

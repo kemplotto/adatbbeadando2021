@@ -45,7 +45,11 @@ $stid = oci_parse($conn, "select * from USER_PROFILE where email=:email");
 						$pfirstname= $row['FIRST_NAME'];
 						
 					}
-					echo "E-mail: "; echo $pemail; echo"<br>";
+					
+
+					
+					
+				echo "E-mail:  "; echo $pemail; echo"<br>";
 					echo "Vezetéknév: "; echo $plastname; echo"<br>";
 					echo "Keresztnév: "; echo $pfirstname; echo"<br>";
 					echo "Telefonszám: "; echo $pcontact;  echo"<br>";

@@ -21,7 +21,7 @@ $hashed_password = "";
 
 <header>
 
-    <h1 class="topic">Regisztráció</h1>
+
 
 
 
@@ -29,7 +29,8 @@ $hashed_password = "";
 
 <main>
 
-<div id="reg-form">
+<div id="reg">
+    <h1 class="topic">Regisztráció</h1>
   <form action="reg2.php" method="POST" enctype="multipart/form-data" autocomplete="off" >
      
 	 <label class="urlap">E-mail cím: <br><input type="email" name="email" placeholder="valami@valami.com" value=""/></label>

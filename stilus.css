@@ -1,6 +1,33 @@
+div#reg login-form input[type=text], input[type=password], input[type=email], input[type=tel], input[type=range], input[type=date],input[type=file]{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    text-align: center;
+}
+div#reg {
+	 width: 40%;
+            margin:auto;
+            text-align: center;
+	
+}
+
+div#login-form {
+	 width: 40%;
+            margin:auto;
+            text-align: center;
+	
+}
+
+#profile-table {
+	background-color: black;
+	
+}
+
 body{	
 	background-size:100% 100%;
-	background-image:url(tv2.jpg);
 	background-repeat:no-repeat;	
 	background-attachment:fixed;	
 }
@@ -155,22 +182,16 @@ li a:hover {
 }
 
 
-#reg-form {
+div#reg-form {
 	 width: 40%;
             margin:auto;
             text-align: center;
 	
 }
-#login-form input[type=text], input[type=password], input[type=email] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
-	text-align: center;
-	}
+
 
 form{
 	display:inline;
+	text-align: center;
+	width :40%;
 }
