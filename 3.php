@@ -20,7 +20,7 @@ include_once("adatb.php");
 
 <?php
 echo "3\n";
-$stid = oci_parse($conn, 'SELECT * FROM SIMON.COMPANY_PROFILE');
+$stid = oci_parse($conn, 'SELECT * FROM EDUCATION');
 if (!$stid) {
     $e = oci_error($conn);
     trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
@@ -35,7 +35,7 @@ if (!$r) {
 echo '<table border=1>';
 while ($record= oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
     echo "<tr>\n";
-    echo sprintf('<p><td>%s </td><td> %s</td><td> Leírás: %s</p></td>', $record['COMPANY_NAME'], $record['LOCATION'], $record['COMPANY_DESCRIPTION']);
+    echo sprintf('<p><td>név:%s </td><td> %s</td><td> Végzés dátuma: %s</p></td>', $record['DEGREE_NAME'], $record['DEGREE_LEVEL'], $record['END_DATE']);
     echo "</tr>\n";
 }
 
