@@ -12,12 +12,13 @@ include_once("adatb.php");
 				<li><a href="index.php">Főoldal</a></li>
 				<li><a href="2.php">2</a></li>
 				<li><a href="3.php">3</a></li>
-				<li><a href="Company_add.php">Cég hozzáadása</a></li>
-				<li><a href="5.php">Cég módosítása</a></li>
+			
 <?php
 $pfirstname="";
 $plastname="";
   if (isset($_SESSION['loggedin'])){ 
+  echo '<li><a href="Company_add.php">Cég hozzáadása</a></li>';
+		echo '<li><a href="5.php">Cég módosítása</a></li>';
       echo '<li><a href="logout.php">Kijelentkezés</a></li>';
 	  echo ' <li><a href="profile.php">Profil</a></li>';
 	  
