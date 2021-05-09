@@ -2,6 +2,8 @@
     session_start();
  	include "menu.php";
 	include "adatb.php";
+	if (!isset($_SESSION['loggedin']))
+    header("Location: login2.php");
 error_reporting(0);
 ?>
 

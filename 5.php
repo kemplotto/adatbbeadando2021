@@ -1,7 +1,8 @@
 <?php
 session_start();
 include_once("adatb.php");
-
+	if (!isset($_SESSION['loggedin']))
+    header("Location: login2.php");
 ?>
 
 <!DOCTYPE html>
